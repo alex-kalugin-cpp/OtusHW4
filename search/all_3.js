@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['feature_5ftests_2ec',['feature_tests.c',['../feature__tests_8c.html',1,'']]],
-  ['feature_5ftests_2ecxx',['feature_tests.cxx',['../feature__tests_8cxx.html',1,'']]],
-  ['features',['features',['../feature__tests_8c.html#a1582568e32f689337602a16bf8a5bff0',1,'features():&#160;feature_tests.c'],['../feature__tests_8cxx.html#a1582568e32f689337602a16bf8a5bff0',1,'features():&#160;feature_tests.cxx']]]
+  ['pack',['pack',['../structpack.html',1,'']]],
+  ['print',['print',['../structtupleprint_1_1TuplePrinter.html#a4dd739b8c590dc3265a0f776904846be',1,'tupleprint::TuplePrinter::print()'],['../structtupleprint_1_1TuplePrinter_3_01Tuple_00_011_01_4.html#a94efe9faabc8b0a0bbd3454db6bae622',1,'tupleprint::TuplePrinter&lt; Tuple, 1 &gt;::print()'],['../namespacetupleprint.html#a7043a30d5e558ce749d735a637cf7797',1,'tupleprint::print(std::ostream &amp;str, const std::tuple&lt; Args... &gt; &amp;t)'],['../namespacetupleprint.html#a0f598e7702ce6fadbcd23f48b4e6575c',1,'tupleprint::print(std::ostream &amp;str, const std::tuple&lt;&gt; &amp;t)']]],
+  ['printip',['printIP',['../IPPrinter_8h.html#a886d3a1292b88ebcb8062599314c7565',1,'printIP(std::ostream &amp;str, const T &amp;container):&#160;IPPrinter.h'],['../IPPrinter_8h.html#a37056ecca37d7942158bbc7abaee068f',1,'printIP(std::ostream &amp;str, const std::string &amp;value):&#160;IPPrinter.h'],['../IPPrinter_8h.html#a7f1e618b09465dd4dac7d8df6904891a',1,'printIP(std::ostream &amp;str, const char *value):&#160;IPPrinter.h'],['../IPPrinter_8h.html#a7af2744e8befca2f0e98742ca899a973',1,'printIP(std::ostream &amp;str, T value):&#160;IPPrinter.h'],['../IPPrinter_8h.html#a257a19f51836f171bd04266ea0093a7f',1,'printIP(std::ostream &amp;str, const std::tuple&lt; Args... &gt; &amp;value):&#160;IPPrinter.h']]]
 ];
