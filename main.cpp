@@ -24,6 +24,11 @@ int main()
 
     std::cout << "\n";
        //print integral types
+    /*!
+    \brief вывод интегральных типов
+
+
+    */
     {
          printIP(std::cout,ch);
          std::cout << "\n";
