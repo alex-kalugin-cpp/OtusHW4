@@ -31,11 +31,18 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT example@example.com)
 
 include(CPack)
-#find_package(GTest REQUIRED)
-
+find_package(GTest REQUIRED)
+find_package(Threads)
+include_directories(${GTEST_INCLUDE_DIRS})
 enable_testing()
 add_executable(gtest_hw4 tests/gtests.cpp)
 #target_link_libraries(gtest_hw4 GTest::Main)
-target_link_libraries(gtest_hw4 gtest_main)
+#target_link_libraries(gtest_hw4 gtest_main)
+target_link_libraries(gtest_hw4
+    ${GTEST_LIBRARIES}
+   )
+target_link_libraries(gtest_hw4
+${CMAKE_THREAD_LIBS_INIT}
+)
 target_include_directories(gtest_hw4 PRIVATE ${PROJECT_SOURCE_DIR})
 set_property(TARGET gtest_hw4 PROPERTY CXX_STANDARD 14)
