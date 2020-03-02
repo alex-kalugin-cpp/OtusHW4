@@ -12,6 +12,11 @@ before_script:
 - sudo apt-get install libboost-test-dev doxygen -y
 - echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
+- cd /usr/src/gtest
+- sudo cmake CMakeLists.txt
+- sudo make
+- sudo cp *.a /usr/lib
+- cd $TRAVIS_BUILD_DIR
 script:
 - cmake .
 - cmake --build .
