@@ -23,7 +23,7 @@ int main()
     unsigned long long li = 8875824491850138409;
 
     std::cout << "\n";
-     //print integral types
+       //print integral types
     {
          printIP(std::cout,ch);
          std::cout << "\n";
