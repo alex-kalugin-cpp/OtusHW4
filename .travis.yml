@@ -13,11 +13,11 @@ before_script:
 - echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
 script:
-- doxygen Doxyfile
 - cmake .
 - cmake --build .
 - cmake --build . --target test
 - cmake --build . --target package
+- doxygen Doxyfile
 deploy:
    - provider: script
      skip_cleanup: true
