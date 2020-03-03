@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['otushw4',['OtusHW4',['../index.html',1,'']]]
+  ['gtests_2ecpp',['gtests.cpp',['../gtests_8cpp.html',1,'']]]
 ];
