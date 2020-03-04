@@ -12,6 +12,7 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
+#include <vector>
 #include "toPrintTuple.h"
 /*!
 \brief Печать IP адреса из контейнера
@@ -72,18 +73,29 @@ template <typename T>
 typename std::enable_if<std::is_integral<T>::value, void>::type ///<проверка на целочисленные типы
 printIP(std::ostream& str,T value)
 {
-   std::size_t size = sizeof(value);
-   uint8_t bytes[size];
-     std::reverse_copy(
-                static_cast<const char*>(static_cast<const void*>(&value)),
-                static_cast<const char*>(static_cast<const void*>(&value)) + size,
-                bytes
-                );
-    for(std::size_t i=0;i< size;++i)
-    {
-        if(i!=0) str << ".";
-        str << +bytes[i];
-    }
+         std::size_t size = sizeof(value);
+         std::vector<unsigned char> arrayOfByte(size);
+         for (std::size_t i = 0; i < size; i++)
+             arrayOfByte[size - i - 1] = (value >> (i * 8));
+         for(std::size_t i=0;i< size;++i)
+         {
+                 if(i!=0) str << ".";
+               str << +arrayOfByte.at(i);
+           }
+
+//на этот вариант ругается компилятор с опцией Werror, а под MSVC совсем не компилируется
+//   std::size_t size = sizeof(value);
+//   uint8_t bytes[size];
+//     std::reverse_copy(
+//                static_cast<const char*>(static_cast<const void*>(&value)),
+//                static_cast<const char*>(static_cast<const void*>(&value)) + size,
+//                bytes
+//                );
+//    for(std::size_t i=0;i< size;++i)
+//    {
+//        if(i!=0) str << ".";
+//        str << +bytes[i];
+//    }
  }
 /*!
 \brief Печать IP адреса из std::tuple

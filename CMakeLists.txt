@@ -18,7 +18,7 @@ if (MSVC)
 else ()
     target_compile_options(print_ip PRIVATE
         -Wall -Wextra -pedantic
-        #-Werror
+        -Werror
     )
 endif()
 install(TARGETS print_ip RUNTIME DESTINATION bin)

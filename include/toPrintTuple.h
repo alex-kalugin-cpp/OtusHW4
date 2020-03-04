@@ -107,7 +107,11 @@ void print(std::ostream& str, const std::tuple<Args...>& t)
 */
 void print(std::ostream& str, const std::tuple<>& t)
 {
-    //
+    //бестолковый код
+    //написан лишь бы компилятор не ругался на неиспользуемые str и t
+    std::tuple<> tt;
+    if(t==tt)
+    str << "";
 
 }
 }
